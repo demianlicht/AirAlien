@@ -2,38 +2,72 @@
 @import "bootstrap";
 @import "toastr";
 
+
 body {
-  color: #565a5c;
-  background-color: #F8F8F8;
+  color: #dcb239;
+  background-color: #fffff;
+  font-family: 'Raleway', sans-serif;
 }
 
 .container {
   width: 80%;
+  color: #caebf2;
 }
 
+.row-login {
+  padding: 10% 0 10% 0;
+  color: #062f4f;
+}
+
+.row {
+  color: #062f4f;
+}
 .navbar-default {
-  background-color: #FFFFFF;
+  background-color: transparent;
+}
+
+.main-search {
+  padding: 10% 0 10% 0;
+}
+.tittle-slogan {
+  color: #062F4F;
+  font-size: 5em;
+  font-weight: 400;
+  padding-top: 10%;
+  font-family: 'Play', sans-serif;
+}
+
+.text-call {
+  color: #062f4f;
+  font-size: 3em;
+  font-family: 'Play', sans-serif;
+}
+h2 {
+  font-family: 'Noticia Text', serif;
+  color: #444A4F;
+  font-size: .5em;
 }
 
 .navbar-default .navbar-brand {
-  color: #FF5A5F;
-  font-size: 2em;
+  color: #062F4F;
+  font-size: 3em;
   font-weight: 400;
+  font-family: 'Noticia Text', serif;
 }
 
 .btn-primary.btn {
-  border: 1px solid #ff5a5f;
+  border: 1px solid #062f4f;
   border-radius: 2px;
   font-weight: bold;
-  background-color: #ff5a5f;
+  background-color: #062f4f;
   color: #fff;
   padding: 10px 25px 10px 25px;
 }
 
 .btn-primary.btn:hover, .btn-primary.btn:focus {
-  border-color: #ff7e82;
-  border-bottom-color: #fa0008;
-  background-color: #ff7e82;
+  border-color: #CC9B0C;
+  border-bottom-color: #CC9B0C;
+  background-color: #CC9B0C;
   outline:none;
 }
 
@@ -104,6 +138,14 @@ body {
   height: 4rem;
 }
 
+.form-control:hover {
+  border-color: #CC9B0C;
+}
+
+.form-control:focus {
+  border-color: #CC9b0c;
+}
+
 .sidebar-list {
   padding-left: 0;
   list-style: none;
@@ -122,18 +164,18 @@ body {
 }
 
 .sidebar-link:hover, .sidebar-link:focus {
-  color: #cacccd;
+  color: #CC9B0C;
   text-decoration: none;
 }
 
 .active.sidebar-link {
-  color: #565a5c;
+  color: #062f4f;
   font-weight: bold;
   text-decoration: none;
 }
 
 label {
-  color: #565a5c;
+  color: #062f4f;
   font-size: 1.1em;
   font-weight: 500;
   margin-bottom: 10px;
@@ -246,7 +288,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .conversation:hover, .conversation:focus {
-  background-color: #F4F4F5;
+  background-color: #CC9B0C;
 }
 
 #wrapper {
@@ -286,4 +328,14 @@ input[type="checkbox"]:checked:before {
   color: #fff;
   vertical-align: middle;
   display: table-cell;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #062F4F;
+  font-family: 'Noticia Text', serif;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #CC9B0C;
+  background-color: transparent;
 }

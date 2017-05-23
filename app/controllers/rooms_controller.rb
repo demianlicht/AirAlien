@@ -4,12 +4,17 @@ class RoomsController < ApplicationController
   def index
     @rooms = current_user.rooms
   end
+  
+  def index
+    @rooms = Room.all
+  end
+  
 
   def show
     @photos = @room.photos
 
     @booked = Reservation.where("room_id = ? AND user_id = ?", @room.id, current_user.id).present? if current_user
-
+    @room = Room.find(params[:id])
     @reviews = @room.reviews
     @hasReview = @reviews.find_by(user_id: current_user.id) if current_user
   end
