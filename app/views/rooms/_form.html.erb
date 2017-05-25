@@ -89,7 +89,7 @@
             </div>
           </div>
         </div>
-
+<%if current_user.admin? %>
         <div class="row">
           <div class="col-md-4">
             <div class="form-group">
@@ -101,7 +101,7 @@
             </div>
           </div>
         </div>
-
+<%end%>
         <div class="row">
           <div class="col-md-4">
             <div class="form-group">
@@ -114,13 +114,23 @@
         </div>
 
         <div id="photos"><%= render 'photos/list' %></div>
-
+<%if current_user.admin? %>
         <div class="row">
           <div class="form-group">
             <%= f.check_box :active %> Active
           </div>
         </div>
-
+<%end%>
+        <div class="row">
+            <div class="col-md-4">
+              <% if @reservations.present? %>
+              <% @reservations.preview %>
+              <%else%>
+              <p>No reservations at the current time</p>
+              <%end%>
+              <% @reviews.count if @hasReview%>
+            </div>
+        </div>
         <div class="actions">
           <%= f.submit "Save", class: "btn btn-primary" %>
         </div>

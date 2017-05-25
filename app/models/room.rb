@@ -1,5 +1,6 @@
 class Room < ActiveRecord::Base
   belongs_to :user
+  belongs_to :admin
   has_many :photos
   has_many :reservations
   has_many :reviews

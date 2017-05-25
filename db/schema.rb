@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160113024655) do
+ActiveRecord::Schema.define(version: 20170523203132) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -114,6 +114,9 @@ ActiveRecord::Schema.define(version: 20160113024655) do
     t.string   "image"
     t.string   "phone_number"
     t.text     "description"
+    t.boolean  "admin"
+    t.string   "default"
+    t.string   "false"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
