@@ -13,9 +13,8 @@
         Listings
       </div>
       <div class="panel-body">
-        <% if @rooms.present?%>
+      <% if current_user.rooms.present?%>
         <% @rooms.each do |room| %>
-        <% if current_user.rooms.count > 1 %>
           <div class="row">
             <div class="col-md-2">
               <%= image_tag room.photos[0].image.url(:thumb) if room.photos.length > 0 %>
@@ -27,16 +26,20 @@
               <%= link_to "Update", edit_room_path(room), class: "btn btn-primary" %>
             </div>
           </div>
-          <%end%>
-          <%end%>
-          <%end%>
-          <% if !@rooms.present? %>
-          <div class="row">
-           <%= link_to "Become a host to add a listing", new_room_path do %>
-           <%end%>
-          </div>
           <hr>
         <% end %>
+      <% else %>
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-7">
+            <h4>No current rooms hosting</h4>
+          </div>
+          <div class="col-md-3 right">
+            <%= link_to "Add room", new_room_path, class: "btn btn-primary"  %>
+          </div>
+        </div>
+      <% end %>
       </div>
     </div>
   </div>
