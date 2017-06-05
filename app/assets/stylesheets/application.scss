@@ -4,7 +4,10 @@
 /*
  *= require jquery-ui/datepicker
  */
-
+html, body {
+    height: 100%;
+  width: 100;
+}
 body {
   color: #dcb239;
   background-color: #fffff;
@@ -79,6 +82,10 @@ h2 {
   outline: none;
 }
 
+.img-banner {
+  width: 75vw;
+  height: 20vw;
+}
 .btn-default.btn {
   width: 100%;
   border-radius: 2px;
@@ -92,7 +99,6 @@ h2 {
   font-size: 18px;
   font-weight: 400;
 }
-
 .row-space-1 {
   margin-top: 6px;
   margin-bottom: 6px;
@@ -116,7 +122,12 @@ h2 {
 }
 
 .avatar-small {
-  width: 28px;
+  width: 30px;
+  height: 30px;
+}
+.center-avatar {
+
+  margin-top: 50%;
 }
 
 .avatar-medium {
@@ -275,6 +286,7 @@ input[type="checkbox"]:checked:before {
 .wide {
   width: 100%;
 }
+
 
 .price_tag {
   background-color: #606567;

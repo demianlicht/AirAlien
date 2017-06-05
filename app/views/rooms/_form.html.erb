@@ -107,13 +107,16 @@
             <div class="form-group">
               <span class="btn btn-default btn-file">
                 <i class="fa fa-cloud-upload fa-lg"></i> Upload Photos
-                <%= file_field_tag "images[]", type: :file, multiple: true %>
+                <%= file_field_tag "images[]", type: :file, multipart: true %>
               </span>
             </div>
           </div>
         </div>
 
         <div id="photos"><%= render 'photos/list' %></div>
+    <div class="actions">
+          <%= f.submit "Save", class: "btn btn-primary" %>
+        </div>
 <%if current_user.admin? %>
         <div class="row">
           <div class="form-group">
