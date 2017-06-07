@@ -3,7 +3,6 @@ Rails.application.configure do
   Paperclip::Attachment.default_options[:storage] = :s3
   Paperclip::Attachment.default_options[:s3_protocol] = 'http'
   Paperclip::Attachment.default_options[:s3_credentials] = {
-  config.paperclip_defaults = {
     :storage => :s3,
     :s3_host_name => "s3-#{ENV['AWS_REGION']}.amazonaws.com",
     :s3_credentials => {
@@ -12,8 +11,7 @@ Rails.application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
       :s3_region => ENV['AWS_REGION'],
     }
-   }
-  }
+}
 
   # Settings specified here will take precedence over those in config/application.rb.
 
