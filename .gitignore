@@ -15,3 +15,5 @@
 /log/*
 !/log/.keep
 /tmp
+# Ignore all env.rb
+/config/initializers/env.rb
